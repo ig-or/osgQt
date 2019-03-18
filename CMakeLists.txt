@@ -322,7 +322,7 @@ IF(WIN32 AND NOT ANDROID)
 
     IF(MSVC)
         # This option is to enable the /MP switch for Visual Studio 2005 and above compilers
-        OPTION(WIN32_USE_MP "Set to ON to build OpenSceneGraph with the /MP option (Visual Studio 2005 and above)." OFF)
+        OPTION(WIN32_USE_MP "Set to ON to build OpenSceneGraph with the /MP option (Visual Studio 2005 and above)." ON)
         MARK_AS_ADVANCED(WIN32_USE_MP)
         IF(WIN32_USE_MP)
             SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MP")
@@ -928,7 +928,7 @@ ENDIF()
 
 # Generate pkg-config configuration files
 IF ( Qt5Widgets_FOUND )
-    SET ( PKGCONFIG_MODULE_NAME osgQt5 )
+    SET ( PKGCONFIG_MODULE_NAME osgqt )
 ELSE()
     SET ( PKGCONFIG_MODULE_NAME osgQt )
 ENDIF()
